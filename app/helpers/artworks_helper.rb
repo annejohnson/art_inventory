@@ -1,6 +1,6 @@
 module ArtworksHelper
   def medium_list_or_none(artwork)
-    if artwork.medium_list.any?
+    if artwork.media.any?
       artwork.media.map do |medium|
         link_to(medium.name, medium_url(medium))
       end.join(', ').html_safe
