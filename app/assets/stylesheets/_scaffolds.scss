@@ -1,95 +1,31 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i');
-
-$body-font-family: 'Open Sans', sans-serif;
-$base-font-size: 16px;
-$pre-base-font-size: 15px;
-
-body {
-  background-color: #fff;
-  color: #333;
-  font-family: $body-font-family;
-  font-size: $base-font-size;
-  line-height: 18px;
-  margin: 33px;
-}
-
-p, ol, ul, td {
-  font-family: $body-font-family;
-  font-size: $base-font-size;
-  line-height: 18px;
-  margin: 33px;
-}
-
-pre {
-  background-color: #eee;
-  padding: 10px;
-  font-size: 11px;
-}
-
-a {
-  color: #000;
-
-  &:visited {
-    color: #666;
-  }
-
-  &:hover {
-    color: #fff;
-    background-color: #000;
-  }
-}
-
-th {
-  padding-bottom: 5px;
-}
-
-td {
-  padding-bottom: 7px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-div {
-  &.field, &.actions {
-    margin-bottom: 10px;
-  }
-}
-
 #notice {
-  color: green;
-}
-
-.field_with_errors {
-  padding: 2px;
-  background-color: red;
-  display: table;
+  color: $success-color;
+  font-weight: bold;
 }
 
 #error_explanation {
-  width: 450px;
-  border: 2px solid red;
-  padding: 7px;
-  padding-bottom: 0;
-  margin-bottom: 20px;
-  background-color: #f0f0f0;
+  border: 2px solid $error-color;
+  background-color: $light-gray;
+  border-radius: $base-border-radius;
 
   h2 {
-    text-align: left;
-    font-weight: bold;
-    padding: 5px 5px 5px 15px;
-    font-size: $pre-base-font-size;
-    margin: -7px;
     margin-bottom: 0;
-    background-color: #c00;
+    padding: 0.5em;
+    background-color: $error-color;
     color: #fff;
   }
 
-  ul li {
-    font-size: $pre-base-font-size;
-    list-style: square;
+  ul {
+    padding: 0.5em;
   }
 }
 
-label {
-  display: block;
+.field_with_errors {
+  background-color: $error-color;
+  color: #fff;
+  border-radius: $base-border-radius;
+
+  label {
+    padding: 0.5em;
+  }
 }
