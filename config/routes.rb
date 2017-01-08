@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   root to: redirect('/artworks')
 
-  resources :artworks
-  resources :media
+  scope '(:locale)' do
+    resources :artworks
+    resources :media
+  end
 end
