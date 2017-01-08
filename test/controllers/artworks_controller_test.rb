@@ -2,7 +2,7 @@ require 'test_helper'
 
 class ArtworksControllerTest < ActionDispatch::IntegrationTest
   setup do
-    @artwork = artworks(:one)
+    @artwork = create(:artwork)
   end
 
   test "should get index" do
@@ -17,7 +17,15 @@ class ArtworksControllerTest < ActionDispatch::IntegrationTest
 
   test "should create artwork" do
     assert_difference('Artwork.count') do
-      post artworks_url, params: { artwork: { available: @artwork.available, name: @artwork.name, price: @artwork.price } }
+      post artworks_url,
+           params: {
+             artwork: {
+               available: @artwork.available,
+               name: @artwork.name,
+               price: @artwork.price,
+               image: fixture_file_upload(@artwork.image.path, 'image/jpeg')
+             }
+           }
     end
 
     assert_redirected_to artwork_url(Artwork.last)

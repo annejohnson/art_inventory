@@ -22,3 +22,5 @@ tmp/*
 
 # Ignore paperclip-generated images
 public/system/*
+
+*.swp
