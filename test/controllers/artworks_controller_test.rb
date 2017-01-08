@@ -59,7 +59,7 @@ class ArtworksControllerTest < ActionDispatch::IntegrationTest
               available: @artwork.available,
               name: 'Morning Meal',
               price: @artwork.price,
-              medium_list: 'coffee, orange peel'
+              medium_list: 'Coffee, Orange Peel'
             }
           }
     assert_redirected_to artwork_url(@artwork)
@@ -67,8 +67,8 @@ class ArtworksControllerTest < ActionDispatch::IntegrationTest
     @artwork.reload
 
     assert_equal(@artwork.name, 'Morning Meal')
-    assert_includes(@artwork.medium_list, 'coffee')
-    assert_includes(@artwork.medium_list, 'orange peel')
+    assert_includes(@artwork.medium_list, 'Coffee')
+    assert_includes(@artwork.medium_list, 'Orange Peel')
   end
 
   test 'should destroy artwork' do

@@ -68,6 +68,21 @@ class ArtworksController < ApplicationController
   end
 
   def artwork_params
-    params.require(:artwork).permit(:name, :available, :price, :image, :medium_list)
+    artwork_hash =
+      params.require(:artwork).permit(
+        :name,
+        :available,
+        :price,
+        :image,
+        :medium_list
+      )
+    artwork_hash[:medium_list] =
+      prepare_medium_list_from_string(artwork_hash[:medium_list].to_s)
+
+    artwork_hash
+  end
+
+  def prepare_medium_list_from_string(medium_list_string)
+    medium_list_string.split(/,\s+/)
   end
 end

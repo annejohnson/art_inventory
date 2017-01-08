@@ -68,6 +68,9 @@ class MediaController < ApplicationController
   end
 
   def medium_params
-    params.require(:medium).permit(:name)
+    medium_hash = params.require(:medium).permit(:name)
+    medium_hash.merge(
+      name: Medium.format_name(medium_hash[:name])
+    )
   end
 end

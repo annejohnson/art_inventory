@@ -32,7 +32,7 @@
     <%= f.label :medium_list do %>
       Media <small>(Comma-separated)</small>
     <% end %>
-    <%= f.text_field :medium_list, value: artwork.medium_list.to_s %>
+    <%= f.text_field :medium_list, value: artwork.medium_list.join(', ') %>
   </div>
 
   <div class="field">

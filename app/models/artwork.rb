@@ -9,6 +9,19 @@ class Artwork < ApplicationRecord
   validates :price, numericality: { allow_nil: true,
                                     greater_than_or_equal_to: 0 }
 
-  has_many :artwork_media
+  has_many :artwork_media, dependent: :destroy
   has_many :media, through: :artwork_media
+
+  def medium_list
+    media.pluck(:name)
+  end
+
+  def medium_list=(medium_list)
+    self.media =
+      medium_list.map do |medium_name|
+        Medium.where(
+          name: Medium.format_name(medium_name)
+        ).first_or_create
+      end
+  end
 end

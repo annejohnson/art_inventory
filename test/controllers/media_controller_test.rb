@@ -17,7 +17,7 @@ class MediaControllerTest < ActionDispatch::IntegrationTest
 
   test "should create medium" do
     assert_difference('Medium.count') do
-      post media_url, params: { medium: { name: @medium.name } }
+      post media_url, params: { medium: { name: 'Unique New Medium' } }
     end
 
     assert_redirected_to medium_url(Medium.last)
