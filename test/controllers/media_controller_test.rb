@@ -5,17 +5,19 @@ class MediaControllerTest < ActionDispatch::IntegrationTest
     @medium = create(:medium)
   end
 
-  test "should get index" do
+  test 'index should list media' do
     get media_url
+
     assert_response :success
+    assert_includes(@response.body, @medium.name)
   end
 
-  test "should get new" do
+  test 'should get new' do
     get new_medium_url
     assert_response :success
   end
 
-  test "should create medium" do
+  test 'should create medium' do
     assert_difference('Medium.count') do
       post media_url, params: { medium: { name: 'Unique New Medium' } }
     end
@@ -23,22 +25,22 @@ class MediaControllerTest < ActionDispatch::IntegrationTest
     assert_redirected_to medium_url(Medium.last)
   end
 
-  test "should show medium" do
+  test 'should show medium' do
     get medium_url(@medium)
     assert_response :success
   end
 
-  test "should get edit" do
+  test 'should get edit' do
     get edit_medium_url(@medium)
     assert_response :success
   end
 
-  test "should update medium" do
+  test 'should update medium' do
     patch medium_url(@medium), params: { medium: { name: @medium.name } }
     assert_redirected_to medium_url(@medium)
   end
 
-  test "should destroy medium" do
+  test 'should destroy medium' do
     assert_difference('Medium.count', -1) do
       delete medium_url(@medium)
     end
