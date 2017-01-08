@@ -5,4 +5,7 @@ class Artwork < ApplicationRecord
     presence: true,
     content_type: { content_type: /\Aimage\/.*\z/ }
   )
+
+  validates :price, numericality: { allow_nil: true,
+                                    greater_than_or_equal_to: 0 }
 end
