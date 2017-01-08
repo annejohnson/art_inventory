@@ -7,10 +7,6 @@ module ArtworksHelper
     end
   end
 
-  def yes_or_no(artwork, attr)
-    artwork.send(attr) ? 'yes' : 'no'
-  end
-
   def price_or_not_applicable(artwork)
     artwork.price.present? ? number_to_currency(artwork.price) : 'n/a'
   end
