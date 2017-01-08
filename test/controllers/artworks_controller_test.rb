@@ -29,6 +29,7 @@ class ArtworksControllerTest < ActionDispatch::IntegrationTest
                available: @artwork.available,
                name: @artwork.name,
                price: @artwork.price,
+               medium_list: @artwork.medium_list,
                image: fixture_file_upload(@artwork.image.path, 'image/jpeg')
              }
            }
@@ -52,8 +53,22 @@ class ArtworksControllerTest < ActionDispatch::IntegrationTest
   end
 
   test 'should update artwork' do
-    patch artwork_url(@artwork), params: { artwork: { available: @artwork.available, name: @artwork.name, price: @artwork.price } }
+    patch artwork_url(@artwork),
+          params: {
+            artwork: {
+              available: @artwork.available,
+              name: 'Morning Meal',
+              price: @artwork.price,
+              medium_list: 'coffee, orange peel'
+            }
+          }
     assert_redirected_to artwork_url(@artwork)
+
+    @artwork.reload
+
+    assert_equal(@artwork.name, 'Morning Meal')
+    assert_includes(@artwork.medium_list, 'coffee')
+    assert_includes(@artwork.medium_list, 'orange peel')
   end
 
   test 'should destroy artwork' do

@@ -1,4 +1,11 @@
-json.extract! artwork, :id, :name, :available, :price, :created_at, :updated_at
+json.extract! artwork,
+              :id,
+              :name,
+              :available,
+              :price,
+              :medium_list,
+              :created_at,
+              :updated_at
 json.image do
   json.full artwork.image.url
   json.thumb artwork.image.url(:thumb)

@@ -1,17 +1,26 @@
-<h1><%= @artwork.name %></h1>
+<h1>
+  <em><%= @artwork.name %></em>
+</h1>
 
-<p id="notice"><%= notice %></p>
+<p id="notice">
+  <%= notice %>
+</p>
 
 <%= image_tag @artwork.image.url(:thumb) %>
 
 <p>
+  <strong>Media:</strong>
+  <%= medium_list_or_none(@artwork) %>
+</p>
+
+<p>
   <strong>Available:</strong>
-  <%= @artwork.available %>
+  <%= yes_or_no(@artwork, :available) %>
 </p>
 
 <p>
   <strong>Price:</strong>
-  <%= number_to_currency @artwork.price %>
+  <%= price_or_not_applicable(@artwork) %>
 </p>
 
 <%= link_to 'Edit', edit_artwork_path(@artwork) %> |
