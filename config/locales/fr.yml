@@ -1,0 +1,16 @@
+fr:
+  'yes': 'oui'
+  'no': 'non'
+  artworks:
+    index:
+      artworks: 'Oevres'
+      thumbnail: 'Image'
+      name: 'Titre'
+      media: 'Media'
+      available: 'Disponible?'
+      price: 'Cout'
+      show: 'Voir'
+      edit: 'Modifier'
+      destroy: 'Détruire'
+      are_you_sure: 'Êtes-vous sûr?'
+      add_artwork: 'Ajouter une œvre'
