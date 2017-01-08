@@ -1,11 +1,8 @@
+<h1><%= @artwork.name %></h1>
+
 <p id="notice"><%= notice %></p>
 
 <%= image_tag @artwork.image.url(:thumb) %>
-
-<p>
-  <strong>Name:</strong>
-  <%= @artwork.name %>
-</p>
 
 <p>
   <strong>Available:</strong>
@@ -14,7 +11,7 @@
 
 <p>
   <strong>Price:</strong>
-  <%= @artwork.price %>
+  <%= number_to_currency @artwork.price %>
 </p>
 
 <%= link_to 'Edit', edit_artwork_path(@artwork) %> |
