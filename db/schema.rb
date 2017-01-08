@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170108164422) do
+ActiveRecord::Schema.define(version: 20170108165857) do
+
+  create_table "artwork_media", force: :cascade do |t|
+    t.integer  "artwork_id"
+    t.integer  "medium_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["artwork_id"], name: "index_artwork_media_on_artwork_id"
+    t.index ["medium_id"], name: "index_artwork_media_on_medium_id"
+  end
 
   create_table "artworks", force: :cascade do |t|
     t.string   "name"

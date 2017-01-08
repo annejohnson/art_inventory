@@ -9,5 +9,6 @@ class Artwork < ApplicationRecord
   validates :price, numericality: { allow_nil: true,
                                     greater_than_or_equal_to: 0 }
 
-  acts_as_taggable_on :media
+  has_many :artwork_media
+  has_many :media, through: :artwork_media
 end
