@@ -26,6 +26,10 @@ fr:
       greater_than_or_equal_to: 'doit être supérieur ou égal à %{count}'
       spoofed_media_type: 'ne correspond pas à ce que cela devrait être'
       taken: "n'est pas disponible"
+    template:
+      header:
+        one: "Impossible d'enregistrer ce(tte) %{model} : 1 erreur"
+        other: "Impossible d'enregistrer ce(tte) %{model} : %{count} erreurs"
   artworks:
     form:
       choose_image: 'Choisir une image'
