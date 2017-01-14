@@ -2,17 +2,23 @@ en:
   site_title: 'Art Inventory'
   'yes': 'yes'
   'no': 'no'
+  activerecord:
+    models:
+      artwork:
+        one: 'Artwork'
+        other: 'Artworks'
+    attributes:
+      artwork:
+        image: 'Image'
+        name: 'Title'
+        available: 'Available'
+        price: 'Price'
+        media: 'Media'
   artworks:
     form:
       choose_image: 'Choose an image'
       change_image: 'Change image'
     index:
-      artworks: 'Artworks'
-      thumbnail: 'Thumbnail'
-      name: 'Title'
-      media: 'Media'
-      available: 'Available?'
-      price: 'Price'
       show: 'Show'
       edit: 'Edit'
       destroy: 'Delete'

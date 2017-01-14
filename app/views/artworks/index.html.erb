@@ -1,15 +1,15 @@
 <p id="notice"><%= notice %></p>
 
-<h1><%= t('.artworks') %></h1>
+<h1><%= Artwork.model_name.human(count: 2) %></h1>
 
 <table>
   <thead>
     <tr>
-      <th><%= t('.thumbnail') %></th>
-      <th><%= t('.name') %></th>
-      <th><%= t('.media') %></th>
-      <th><%= t('.available') %></th>
-      <th><%= t('.price') %></th>
+      <th><%= Artwork.human_attribute_name(:image) %></th>
+      <th><%= Artwork.human_attribute_name(:name) %></th>
+      <th><%= Artwork.human_attribute_name(:media) %></th>
+      <th><%= Artwork.human_attribute_name(:available) %></th>
+      <th><%= Artwork.human_attribute_name(:price) %></th>
       <th colspan="3"></th>
     </tr>
   </thead>

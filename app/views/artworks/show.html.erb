@@ -9,17 +9,17 @@
 <%= image_tag @artwork.image.url(:thumb) %>
 
 <p>
-  <strong>Media:</strong>
+  <strong><%= Artwork.human_attribute_name(:media) %>:</strong>
   <%= medium_list_or_none(@artwork) %>
 </p>
 
 <p>
-  <strong>Available:</strong>
+  <strong><%= Artwork.human_attribute_name(:available) %>:</strong>
   <%= yes_or_no(@artwork, :available) %>
 </p>
 
 <p>
-  <strong>Price:</strong>
+  <strong><%= Artwork.human_attribute_name(:price) %>:</strong>
   <%= price_or_not_applicable(@artwork) %>
 </p>
 

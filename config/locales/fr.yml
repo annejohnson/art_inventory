@@ -2,17 +2,23 @@ fr:
   site_title: "Inventaire d'Art"
   'yes': 'oui'
   'no': 'non'
+  activerecord:
+    models:
+      artwork:
+        one: 'Œuvre'
+        other: 'Œuvres'
+    attributes:
+      artwork:
+        image: 'Image'
+        name: 'Titre'
+        available: 'Disponible'
+        price: 'Prix'
+        media: 'Matières'
   artworks:
     form:
       choose_image: 'Choisir une image'
       change_image: "Changer d'image"
     index:
-      artworks: 'Oevres'
-      thumbnail: 'Image'
-      name: 'Titre'
-      media: 'Media'
-      available: 'Disponible?'
-      price: 'Cout'
       show: 'Voir'
       edit: 'Modifier'
       destroy: 'Détruire'
