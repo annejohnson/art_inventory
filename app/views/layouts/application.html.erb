@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Art Inventory</title>
+    <title><%= t('site_title') %></title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -11,7 +11,7 @@
   <body>
     <div class="page-header">
       <h1>
-        <%= link_to 'Art Inventory', artworks_url %>
+        <%= link_to t('site_title'), artworks_url %>
       </h1>
     </div>
     <%= yield %>
