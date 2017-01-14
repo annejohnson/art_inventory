@@ -3,6 +3,9 @@ fr:
   'yes': 'oui'
   'no': 'non'
   artworks:
+    form:
+      choose_image: 'Choisir une image'
+      change_image: "Changer d'image"
     index:
       artworks: 'Oevres'
       thumbnail: 'Image'

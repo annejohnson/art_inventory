@@ -3,6 +3,9 @@ en:
   'yes': 'yes'
   'no': 'no'
   artworks:
+    form:
+      choose_image: 'Choose an image'
+      change_image: 'Change image'
     index:
       artworks: 'Artworks'
       thumbnail: 'Thumbnail'

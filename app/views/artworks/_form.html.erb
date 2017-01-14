@@ -19,7 +19,7 @@
     <% end %>
 
     <%= f.label :image,
-                (artwork.persisted? ? 'Change Image' : 'Choose Image') %>
+                (artwork.persisted? ? t('.change_image') : t('.choose_image')) %>
     <%= f.file_field :image %>
   </div>
 
