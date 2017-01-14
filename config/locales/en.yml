@@ -18,6 +18,7 @@ en:
     form:
       choose_image: 'Choose an image'
       change_image: 'Change image'
+      comma_separated: 'comma-separated'
     index:
       show: 'Show'
       edit: 'Edit'

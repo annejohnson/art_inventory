@@ -18,6 +18,7 @@ fr:
     form:
       choose_image: 'Choisir une image'
       change_image: "Changer d'image"
+      comma_separated: 'séparées par virgules'
     index:
       show: 'Voir'
       edit: 'Modifier'
