@@ -17,7 +17,9 @@
   <tbody>
     <% @artworks.each do |artwork| %>
       <tr>
-        <td><%= image_tag artwork.image.url(:thumb) %></td>
+        <td>
+          <%= image_tag artwork.image.url(:thumb), class: 'index-art-image' %>
+        </td>
         <td>
           <em><%= artwork.name %></em>
         </td>
