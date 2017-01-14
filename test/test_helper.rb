@@ -5,3 +5,5 @@ require 'rails/test_help'
 class ActiveSupport::TestCase
   include FactoryGirl::Syntax::Methods
 end
+
+Rails.application.routes.default_url_options[:locale] = :en
