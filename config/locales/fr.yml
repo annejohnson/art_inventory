@@ -14,6 +14,18 @@ fr:
         available: 'Disponible'
         price: 'Prix'
         media: 'Matières'
+    errors:
+      models:
+        artwork:
+          attributes:
+            image:
+              blank: 'doit être remplie'
+  errors:
+    messages:
+      blank: 'doit être rempli(e)'
+      greater_than_or_equal_to: 'doit être supérieur ou égal à %{count}'
+      spoofed_media_type: 'ne correspond pas à ce que cela devrait être'
+      taken: "n'est pas disponible"
   artworks:
     form:
       choose_image: 'Choisir une image'
