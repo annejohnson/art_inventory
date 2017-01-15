@@ -31,6 +31,8 @@ fr:
         one: "Impossible d'enregistrer ce(tte) %{model} : 1 erreur"
         other: "Impossible d'enregistrer ce(tte) %{model} : %{count} erreurs"
   artworks:
+    create:
+      success_notice: 'Œuvre crée avec succès.'
     form:
       choose_image: 'Choisir une image'
       change_image: "Changer d'image"

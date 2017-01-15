@@ -28,7 +28,10 @@ class ArtworksController < ApplicationController
 
     respond_to do |format|
       if @artwork.save
-        format.html { redirect_to @artwork, notice: 'Artwork was successfully created.' }
+        format.html {
+          redirect_to @artwork,
+                      notice: t('.success_notice')
+        }
         format.json { render :show, status: :created, location: @artwork }
       else
         format.html { render :new }

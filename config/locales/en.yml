@@ -20,6 +20,8 @@ en:
         one: '1 error prohibited this %{model} from being saved'
         other: '%{count} errors prohibited this %{model} from being saved'
   artworks:
+    create:
+      success_notice: 'Artwork was successfully created.'
     form:
       choose_image: 'Choose an image'
       change_image: 'Change image'
