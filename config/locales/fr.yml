@@ -28,8 +28,8 @@ fr:
       taken: "n'est pas disponible"
     template:
       header:
-        one: "Impossible d'enregistrer ce(tte) %{model} : 1 erreur"
-        other: "Impossible d'enregistrer ce(tte) %{model} : %{count} erreurs"
+        one: "Impossible d'enregistrer ce(tte) %{model} - 1 erreur:"
+        other: "Impossible d'enregistrer ce(tte) %{model} - %{count} erreurs:"
   artworks:
     create:
       success_notice: 'Œuvre crée avec succès.'

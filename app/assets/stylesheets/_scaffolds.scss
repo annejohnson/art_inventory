@@ -7,6 +7,7 @@
   border: 2px solid $error-color;
   background-color: $light-gray;
   border-radius: $base-border-radius;
+  margin-bottom: 1em;
 
   h2 {
     margin-bottom: 0;
@@ -21,11 +22,10 @@
 }
 
 .field_with_errors {
-  background-color: $error-color;
-  color: #fff;
-  border-radius: $base-border-radius;
-
   label {
+    background-color: $error-color;
+    color: #fff;
+    border-radius: $base-border-radius;
     padding: 0.5em;
   }
 }
